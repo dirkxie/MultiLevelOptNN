@@ -1,6 +1,7 @@
 import tensorflow as tf
 import numpy as np
 from test_functions import op_in_func
+sys.dont_write_bytecode = True
 
 test_graph = tf.Graph()
 
