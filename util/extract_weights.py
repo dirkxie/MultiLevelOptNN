@@ -21,7 +21,7 @@ def extract_weights (ckpt_dir, saver):
     params = {}
     
     print('3. Extracted weights info:')
-    for var in tf.trainable_variables():
+    for var in tf.all_variables():
         var_name = var.name
         var_shape = var.get_shape()
         print(var_name)

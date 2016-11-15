@@ -14,7 +14,7 @@ import numpy as np
 class Net2Net_class(object):
     def __init__(self, error=1e-4):
         self._error_th=error
-        print 'Net2Net module initialize...'
+        print 'Net2Net module initialized.'
         
     def Net2Wider(self, weight1, bias1, weight2, new_width, verification=True):
         """ Net2Wider operation
@@ -40,14 +40,14 @@ class Net2Net_class(object):
         bias1 = bias1.squeeze()
         
         if weight1.ndim == 2:
-            print ('weight of fully connected layer')
+            print ('inputs: FC w/b')
             assert weight1.shape[1] == weight2.shape[0], 'Check if shape of weight1 & 2 match'
             assert weight1.shape[1] == len(bias1), 'Check if shape of weight 1 & bias 1 match'
             assert weight1.shape[1] < new_width, 'new_width should be larger than old width'
             return self._wider_fc(weight1, bias1, weight2, new_width, verification)
         
         else:
-            print ('weight of convolutional layer')
+            print ('inputs: conv w/b')
             assert weight1.shape[3] == weight2.shape[2], 'Check shape of weight'
             assert weight1.shape[3] == len(bias1), 'Check shape of bias'
             assert weight1.shape[3] < new_width, 'new_width should be larger than old width'
