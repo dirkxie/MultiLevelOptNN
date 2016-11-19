@@ -2,8 +2,13 @@
 
 ## Workflow:
 1. define an old tf.Graph <br />
-2. train the network with data with [train_load_net] function<br />
-3. to expand a network, call [extract_weight] function, weights will be returned as numpy.ndarray<br />
-4. call [Net2Net] functions to expand weights and layers<br />
-5. define new tf.Graph<br />
-6. call [train_load_net] to restart from a checkpoint with new graph and new weights<br />
+2. train the network with data with [train_load_net] function <br />
+3. to expand a network, call [extract_weight] function, weights will be returned as numpy.ndarray <br />
+4. call [Net2Net] functions to expand weights and layers <br />
+5. define new tf.Graph <br />
+6. call [train_load_net] to restart from a checkpoint with new graph and new weights <br />
+
+## To be finished [LungNodule]:
+1. expand conv2 twice as wide <br />
+2. add 1 more convolutional layer after conv3 <br />
+3. add skip layer (cautious) <br />
