@@ -1,1 +1,1 @@
-testing
+LungNoduleSeparateGraph is the desired way to define networks as it is easier for parameter extraction and train from checkpoint.
