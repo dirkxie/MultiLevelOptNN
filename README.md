@@ -12,3 +12,12 @@
 1. expand conv2 twice as wide <br />
 2. add 1 more convolutional layer after conv3 <br />
 3. add skip layer (cautious) <br />
+
+## Notice when using K40C GPU
+1. Default session will only allocate 512MB of GDDR. Add the following to your session: <br />
+    gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction= any 0~1 number) <br />
+    with tf.Session(config=tf.ConfigProto(gpu_options=gpu_options)) as sess: <br />
+
+2. Total GDDR of K40C is 10GB, call nvidia-smi to see memory allocation status first before run. <br />
+   
+3. Let us share memory by calculate how much memory is needed first and then change the factor in code, <br />
