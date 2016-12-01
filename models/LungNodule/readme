@@ -1,1 +1,19 @@
 LungNoduleSeparateGraph is the desired way to define networks as it is easier for parameter extraction and train from checkpoint.
+
+1. current network
+conv
+pool
+relu
+dropout
+
+conv
+pool
+relu
+dropout
+
+fc
+fc
+
+2. misc
+AdamOptimizer
+Learning rate decay
